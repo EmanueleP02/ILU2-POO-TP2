@@ -20,6 +20,14 @@ public class ControlAcheterProduit {
 	}
 	
 	public boolean verifierDisponibilite(String produit) {
-		return false;
+	    String[] etatMarche = village.donnerEtatMarche();
+	    for (int i = 0; i < etatMarche.length; i += 3) {
+	        String produitVende = etatMarche[i + 2];
+
+	        if (produitVende.equals(produit)) {
+	            return true;
+	        }
+	    }
+	    return false;
 	}
 }
