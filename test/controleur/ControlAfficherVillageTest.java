@@ -1,4 +1,4 @@
-package controleur;
+package controleur; 
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 
 import personnages.Chef;
 import villagegaulois.Village;
-
+ 
 class ControlAfficherVillageTest {
 	private Village village;
 	private Chef chef;
@@ -24,9 +24,9 @@ class ControlAfficherVillageTest {
 		assertTrue(nomVillage.equals("Le village des irréductibles"));
 	}
 	@Test
-	void testnbEtals() {
+	void testnbEtalsInit() {
 		ControlAfficherVillage ctrlAfficherVillage = new ControlAfficherVillage(village);
-		assertTrue(ctrlAfficherVillage.donnerNbEtals()==0);
+		assertTrue(ctrlAfficherVillage.donnerNbEtals()== 0);
 	}
 	@Test
 	void testnomsVillageois() {
